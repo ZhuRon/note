@@ -32,8 +32,6 @@ npm i babel-preset-env --save-dev
 npm run dev & npm run serve
 
 
-
-
 yarn add webpack --dev
 yarn add jquery bootstrap
 yarn add webpack babel-core babel-loader babel-preset-env handlebars handlebars-loader --dev
@@ -43,3 +41,5 @@ webpack需要一个配置文件，输出webpack  入口main.js、出口bundle.js
 {{!-- 源代码和浏览器效果中间的webpack类似编译器，但没有起到编译的作用。
     起到编译作用的是stylus、babel...
     webpack是管理编译器(stylus、babel)的管理者通过loader来管理 --}}
+请求
+ npm install --save mock axios
