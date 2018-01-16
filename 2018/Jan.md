@@ -467,3 +467,4 @@ vuex(数据管理) vue 三驾马车之一
 # 1.15
 http://blog.csdn.net/h5_queenstyle12/article/details/75386359
 最详细的Vuex教程
+ 
