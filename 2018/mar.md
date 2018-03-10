@@ -30,7 +30,7 @@ dist目录就是等待处理的静态文件
 // 异步
 Promise .then .catch
 file mysql 都是异步的，需要异步转同步
-async await
+async await 
 启动静态服务器
 var express = require('express')
 var app = express();
