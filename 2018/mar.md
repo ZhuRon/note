@@ -38,7 +38,51 @@ var server = require('http').createServer(app);
 app.use('/',express.static(__dirname+'/www'))
 server.listen(3000);
 
-socker 是实时RealTime核心，
+socket 是实时RealTime核心，
 http协议是无法长链接的，一旦送达，立马断开 
 如果想跟服务器连接，只能ajax提交（长期轮询,消耗资源），再提交get/post（刷新页面）
 后来有人用iframe（内嵌网页用来通讯）
+
+# 3.10
+mongodb NOSQL 的数据库
+文档数据库 区别于关系型数据库
+数据库里面存了一个个文件，doc 这里面的内容就是json（bison文件，进行了优化）
+支持全面js的解析 它的命令行（shell）为js风格
+mongod --dbpath D:\db\data
+mongo shell 
+适合存储非结构数据
+show dbs 列出数据库
+ues tutorial 选用数据库
+命名空间的集合
+collection 集合
+mongodb  不需要先声明，直接保存就可以创建了
+column可以允许一些冗余
+
+ssr
+页面会输出所有的东西，方便爬虫搜索引擎搜索
+vue，只会输出一个挂载点
+
+seo
+nuxt的本质是将vue交给后端渲染
+在webpack里面有server-side-renderer
+react中有next.js
+所以vue里面有nuxt
+.vue => html/css/js后端渲染
+所以这个时候，data可能来自后端或者来自前端，所以要进行区分，所以用asyncData
+user-agent判断用户的所使用的浏览器的种类和版本
+url/api/user=>router 匹配
+=>controller 后端业务逻辑
+=>model view 通信
+
+mongoose 是驱动器 数据库抽象
+
+# 3.12
+mongodb 操作 支持内部js解析引擎
+数据过多的时候加索引
+mongodb
+.find() 返回的是cursor（游标）
+比如查询20000条数据，会展示前20条数据
+$开始的运算符， mongodb支持js风格的编译
+表达范围 $gt $lt 开始到结尾
+用json对象
+性能优化，用explain进行操作分析
