@@ -86,3 +86,11 @@ $开始的运算符， mongodb支持js风格的编译
 表达范围 $gt $lt 开始到结尾
 用json对象
 性能优化，用explain进行操作分析
+react 没有帮你实现双向绑定
+所以要加上事件监听代码
+prefix所有东西前面都会加上/api
+md5加密
+份额page 每页条limit
+
+# 3.13
+reducer 纯函数 旧状态+参数 返回新状态
