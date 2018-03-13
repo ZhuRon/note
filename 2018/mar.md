@@ -94,3 +94,54 @@ md5加密
 
 # 3.13
 reducer 纯函数 旧状态+参数 返回新状态
+thunk 允许异步
+action处理异步，reducer
+由页面触发一个action，在reducer（oldState，data）->返回一个新状态
+middleware作为中间件，可以做一个log，根据点击数量，做一张热力图
+Schema 设计 电商网站 good是 orders cate user
+mongodb给了我们文档NOSQL便利
+数据类型 json array
+如果在amaze买 农机产品 
+{
+    _id:ObjectId(),
+    name:'Extra Large Wheelballow'
+    description:'Heavy duty wheelbarrow...',
+    text:'',
+    details:{
+        weight:47,
+        weight_units: "lbs",
+	    model_num: 4032983402
+        manufacture:'Acme',
+        color:"Green"
+    },
+    pricing:{
+        sale:489700,
+        retail:589700
+    },
+    price_history:[{
+        {
+            retail:529700,
+            sale:429700,
+            start:new Date(2017,11,11),
+            end:new Date(2017,11,12)
+        }
+    },
+    {
+        {
+            retail:529700,
+            sale:429700,
+            start:new Date(2018,5,1),
+            end:new Date(2018,5,2)
+        }
+    }],
+    total_reviews:4,
+    average_review:4.5,
+    created_at:,
+    updated_at;,
+    tags:['tools','gardening','soil'],
+    primary_category:ObjectId("fdfdfdfdafs"),
+    category_ids:[
+        ObjectId("fdfdfdfdafs"),
+        ObjectId("ffffff")
+    ]
+}
