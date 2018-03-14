@@ -145,3 +145,12 @@ mongodb给了我们文档NOSQL便利
         ObjectId("ffffff")
     ]
 }
+# 3。14
+redux container 概念 父组件 与redux通信
+props，action是=>子组件
+Immutable 状态不可变
+react state 改变会rerender 
+redux 使用immutable来实现不可变的state
+业界认为，可变的状态是万恶之源
+如果进行操作state没有变，这时候没有必要rerender（性能问题）
+浅拷贝，深拷贝
