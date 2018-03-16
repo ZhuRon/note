@@ -145,7 +145,7 @@ mongodb给了我们文档NOSQL便利
         ObjectId("ffffff")
     ]
 }
-# 3。14
+# 3.14
 redux container 概念 父组件 与redux通信
 props，action是=>子组件
 Immutable 状态不可变
@@ -154,3 +154,49 @@ redux 使用immutable来实现不可变的state
 业界认为，可变的状态是万恶之源
 如果进行操作state没有变，这时候没有必要rerender（性能问题）
 浅拷贝，深拷贝
+模块化
+n个reducer users.js auth article
+redux 怎么到ui组件里面去，通过connect
+connect在返回的时候加一层redux
+react风格，什么东西都喜欢jsx，并且组件化指令
+action 负责提交reducer
+# 3.16
+// co 顺序执行异步，自动化方案
+// 生成器函数 async
+function* fn(a){
+    // 添加一些异步的操作 同步化运行
+    a = yield a
+    let b= yield 2;
+    let c = yield 3;
+    return a+b+c;
+}
+function co(fn,...args){
+    let g = fn(...args);
+    return new Promise((resolve,reject)=>{
+        function next(lastValue){
+            // next 参数可以参与yield后面的计算
+            let {value,done}=g.next(lastValue)
+            if(done){
+                resolve(value);
+            }else{
+                next(value)
+            }
+        }
+        next();
+    })
+    // fn() 执行才能去迭代
+    // next()才能往下走
+    // 返回值 done true or false
+    // resolve 那一刻
+}
+// return Promise 
+co(fn,100)
+.then(value=>{
+    console.log(value)
+})
+// 迭代器
+let g = fn();
+console.log(g.next())
+console.log(g.next())
+console.log(g.next())
+console.log(g.next())
