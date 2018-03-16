@@ -200,3 +200,28 @@ console.log(g.next())
 console.log(g.next())
 console.log(g.next())
 console.log(g.next())
+
+节流：
+        // 函数节流 mousemove scroll 是否加载数据 出现指示
+        // 函数执行的太平凡，就有可能导致内存的使用量加大，页面性能下降，减少执行
+        // 在一定的时间50ms，执行一次
+        // 闭包就是在函数运行的时候可以引用到它定义的时候的函数作用域
+        let throttle = (fn,delay=50)=>{
+            let stattime = 0;
+            return function(...args){
+                let curTime = new Date();
+                if(curTime-stattime>=delay){
+                    fn.apply(this,args);
+                    stattime = curTime;
+                }
+
+            }
+        }
+        function doMousemove(event){
+            console.log(event.clientX,event.clientY)
+        }
+        let slowMousemove = throttle(doMousemove,2000)
+        const oBox = document.querySelector('.box');
+        oBox.addEventListener('mousemove',(event)=>{
+            slowMousemove(event)
+        })
