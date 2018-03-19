@@ -225,3 +225,25 @@ console.log(g.next())
         oBox.addEventListener('mousemove',(event)=>{
             slowMousemove(event)
         })
+
+# 3.17
+typescript (2012年推出)微软开发，javascript 超集
+js有一个弊病，不太适合企业开发
+需要协同，就需要文档，面向对象（opp）的模块化方案
+Interface 泛型
+class protected
+private implements
+类化，显示声明 提供了一个js的类型系统
+阿里技术栈：React+TypeScript
+预编译，将一个.ts->.js
+ts 带了了预编译的js，从动态语言，静态，类型检测，杜绝错误。
+typescript 类型？
+typescript 认为undefined 是其他类型的子类型
+
+泛型
+是指在定义函数，接口或类的时候，不预先指定具体的类型，在使用时在制定类型的一种特性
+
+function a() {}
+var b = {}
+a.prototype = b
+b.constructor = a 
