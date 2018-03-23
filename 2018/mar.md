@@ -247,3 +247,7 @@ function a() {}
 var b = {}
 a.prototype = b
 b.constructor = a 
+
+# 3.22
+extract-text-webpack-plugin webpack必备插件
+利用浏览器并发进行http协议下载
