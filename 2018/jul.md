@@ -112,5 +112,31 @@ border-none()
 </style>
 
 
+#7.6
+vue设计
+vue-router 设置路由
+选择rem或者em进行适配
+(function(doc,win){
+    var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window? 'orientationchange':'resize',
+    recalc = function(){
+        var clientWidth = docEl.clientWidth;
+        if(!clientWidth) return;
+        console.log(clientWidth)
+        docEl.style.fontSize = 20*(clientWidth/320)+'px';
+    };
+    if(!doc.addEventListener) return;
+    win.addEventListener(resizeEvt,recalc,false);
+    doc.addEventListener('DOMContentLoaded',recalc,false);
+})(document,window)
 
+yarn add stylus stylus-loader -D stylus安装，在开发阶段安装，-dev
 
+懒加载 lazyload 
+const home = ()=>import('../page/home.vue')
+用一个函数把页面封装起来，
+
+slot :扩展组件
+
+wh($width,$height)
+任何一个盒子都可以复用的css
