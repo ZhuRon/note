@@ -128,6 +128,8 @@ vue-router 设置路由
     if(!doc.addEventListener) return;
     win.addEventListener(resizeEvt,recalc,false);
     doc.addEventListener('DOMContentLoaded',recalc,false);
+
+    
 })(document,window)
 
 yarn add stylus stylus-loader -D stylus安装，在开发阶段安装，-dev
@@ -139,4 +141,44 @@ const home = ()=>import('../page/home.vue')
 slot :扩展组件
 
 wh($width,$height)
-任何一个盒子都可以复用的css
+
+
+vuex:
+一个项目中只有一颗单一状态树
+
+lbs
+location base servers 在可送范围半径内把显示出来
+mutation-types 说明清单
+
+computed 是一个json
+mapstate 会借一个state
+...mapstate 将新的state json展开到computed的json里面去
+
+ct()
+    position absolute
+    top 50%
+    transform translateY(-50%)
+    相对于父元素决定定位在正中间
+    获取城市位置不要用生命周期，不准确耗时
+    而用created 有时候会阻塞组件渲染
+
+# 7.7
+api文档的书写
+
+navigationBar的封装
+提供history title 居中 右边的buttons
+singnUP 显示是否登录
+
+<section class="head_goback" @click="$router.go(-1)" v-if="goBack">返回</section>
+
+用history返回上一界面
+绑一个钩子，然后传入子组件 props里面，用v-if判断是否渲染
+
+盒子在父容器里面绝对居中
+center()
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%,-50%)
+
+验证码：
