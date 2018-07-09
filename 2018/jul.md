@@ -1,4 +1,4 @@
-#7.4
+# 7.4
 一像素问题解决
 border-1px($color)
   position: relative
@@ -112,7 +112,7 @@ border-none()
 </style>
 
 
-#7.6
+# 7.6
 vue设计
 vue-router 设置路由
 选择rem或者em进行适配
@@ -178,7 +178,34 @@ singnUP 显示是否登录
 center()
     position absolute
     top 50%
-    left 50%
+    left 50% 
     transform translate(-50%,-50%)
 
 验证码：
+
+异步是不可回避的问题：callback promise 先用thenable 然后用async
+
+动态路由：      path:'/city/:cityid',component:city
+fetch 兼容性 api比较原始
+
+# 7.9
+
+前端工作流
+- babel js预编译器
+- npm  npm run dev   npm install  项目构建的基本流程
+- postcss 解决前缀问题 css 变量
+- stlus/scss/less
+使用最新的js语法来编写，运行的代码可以根据需求编译程相应的版本
+{"presets": ["env"]} 将es6 转成 es5 env：根据环境进行自我处理
+babel 的工作原理
+babel-sore（babel转译的核心）
+babel-cli(通过命令行对js代码进行转译)
+https://www.jianshu.com/p/e9b94b2d52e2
+
+babel 编译js
+source_code .babelrc 通过 cli 到 targets(运行平台)
+依赖于presets（预处理集)
+babel的预处理只是语法糖 class 没有 把es5里面没有的es6的语法实现一遍，最基本的const之流就在babel-core李
+还有一些没有的Object.assign(),promise,async await 这种es6最新语法或者概念，babel里面没有
+所以用一种新的做法去做，引入新的插件，plugins
+最新的插件就是：transform-runtime
