@@ -258,3 +258,13 @@ lodash 作为工具，是很多组建会使用的，省去了到处import
     new CopyWebpackPlugin.ProvidePlugin({
       '_':'lodash'
     })
+
+# 7.13
+eventbus
+能够将兄弟组件之间的事件进行简单处理并进行传递，其实就是一个发布订阅者模式的vue实现
+事件会沿着bus进行查找，有没有谁订阅了这个事件
+专属npm包：vue-event-proxy 事件代理器
+
+watch的深入使用
+监听所有想监听的东西，watch（）
+https://www.imooc.com/article/28187
