@@ -268,3 +268,9 @@ eventbus
 watch的深入使用
 监听所有想监听的东西，watch（）
 https://www.imooc.com/article/28187
+
+# 7.14
+action要去做数据请求，
+设计稿 psd用来取图
+产品原型设计稿 可以再pc和手机上的预览图
+跟接口的一些设计及沟通
