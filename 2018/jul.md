@@ -279,3 +279,26 @@ action要去做数据请求，
 能够将兄弟组件之间的事件进行简单处理并进行传递，其实就是一个发布订阅者模式的vue实现
 同一个事件有组件订阅，当发布这个事件的时候订阅组件得到相应，摆脱了兄弟组件需要父组件进行传达的语法复杂的问题。
 除此之外，还可以用vuex，通过引入数据流概念解决。在订阅者和发布者之间都引用eventbus，其实就是vue的实例，都是由一个eventbus对他们进行服务，当事件发生，专车就会把消息通知订阅者，Vue实例对象是具有emit和on这两个api的。由同一个对象在不同组件之间都进行斡旋、
+# 7.23
+'postcss-loader' css前缀兼容性问题
+devtool: 'inline-source-map' 解决调试代码挤在一行的问题
+yarn add babel-core babel-loader babel-preset-env babel-preset-react -D 自行搭建react相关的东西
+yarn add react react-dom
+一张图片，如果命名相同，但是图片内容改了，就要在[name]后面加上[hash:8].[ext]
+# 7.24
+js 请求有一个同源机制
+后端解决跨域问题 koa-cors
+前端解决方案 jsonp
+利用了script标签可以访问外部跨域脚本或地址
+改造一下后端接口，让它实现jsonp json with padding
+返回的数据，data封装一下callback（data）
+  const callback = ctx.query.callback;
+  if(callback){
+     ctx.body ='callback(' + JSON.stringify(data)+')';
+  }else{
+    ctx.body = data;
+  }
+
+})
+yarn add rewire 对webpack进行重新设置 proxyquire
+react-router-dom 把路由对应的东西挂载到页面上去
