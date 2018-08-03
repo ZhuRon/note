@@ -251,3 +251,13 @@ b.constructor = a
 # 3.22
 extract-text-webpack-plugin webpack必备插件
 利用浏览器并发进行http协议下载
+
+# 3.23
+reducers 是react的核心，用来改变状态
+store 页面全局访问
+...state 推平数组，展开所有内容
+
+        case 'DELETE_POST':
+            return state.filter(item=>action.id !== item.id)
+        default:return state
+        删除

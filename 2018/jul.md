@@ -302,3 +302,14 @@ js 请求有一个同源机制
 })
 yarn add rewire 对webpack进行重新设置 proxyquire
 react-router-dom 把路由对应的东西挂载到页面上去
+# 7.25
+Object.assign 添加数据
+albumList.sort((a,b)=>{return new Date(b.public_time).getTime()-new Date(b.public_time).getTime()}
+把json数据进行string转换，然后冒泡排序
+react 的modul层，把数据进行处理，然后统一格式输出需要的数据
+better-scroll 最好的滚动插件
+
+# 7.25
+redux 
+store 单一状态树
+redux state,actions,没有直接的map,提出一个需求，将组建分成两部分，原来的ui组建部分保留，新增一个container的容器，redux 将数据给container，container再将数据给component
